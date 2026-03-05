@@ -13,7 +13,7 @@ test: tidy lint-assets
 # Validates XHTML 1.0 Strict
 tidy:
 	@echo "Checking XHTML validity..."
-	tidy -e -xml index.html
+	tidy -e --doctype transitional --output-xhtml yes --gnu-emacs yes index.html
 
 # Lints assets (ignoring style 'infos')
 lint-assets:
